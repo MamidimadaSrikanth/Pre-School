@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART KIDZZ - Where Little Minds Learn Big Dreams | Kindergarten & Preschool</title>
+    <meta name="description"
+        content="SMART KIDZZ is a joyful kindergarten where learning feels like play and every child grows with confidence, creativity, and care. Explore our programs, book a tour today!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span class="badge">New Admission 2026-27</span>
+            <p>🎉 Fall 2026 Admissions are now OPEN! Book a campus tour and get an early-bird registration fee waiver.
+            </p>
+            <button class="announcement-close" aria-label="Close Announcement">&times;</button>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Left Nav Links -->
+                <div class="nav-group nav-left">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#programs" class="nav-link">Programs</a>
+                    <a href="#teachers" class="nav-link">Teachers</a>
+                </div>
+
+                <!-- Brand Logo -->
+                <a href="#home" class="brand-logo">
+                    <div class="logo-icon">
+                        <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Multi-color Pinwheel Petals -->
+                            <path d="M20 20C20 12 26 6 32 8C34 14 28 20 20 20Z" fill="#FF5388" />
+                            <path d="M20 20C28 20 34 26 32 32C26 34 20 28 20 20Z" fill="#F6B830" />
+                            <path d="M20 20C20 28 14 34 8 32C6 26 12 20 20 20Z" fill="#00B894" />
+                            <path d="M20 20C12 20 6 14 8 8C14 6 20 12 20 20Z" fill="#0984E3" />
+                            <circle cx="20" cy="20" r="5" fill="#FFF" />
+                        </svg>
+                    </div>
+                    <span class="logo-text">SMART KIDZZ</span>
+                </a>
+
+                <!-- Right Nav Links -->
+                <div class="nav-group nav-right">
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="btn btn-pink btn-pill header-btn" onclick="openModal('tourModal')">Book a
+                        Tour</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose">&times;</button>
+        <div class="mobile-logo">
+            <span class="logo-text">SMART KIDZZ</span>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#programs" class="mobile-link">Programs</a></li>
+            <li><a href="#teachers" class="mobile-link">Teachers</a></li>
+            <li><a href="#about" class="mobile-link">About Us</a></li>
+            <li><a href="#routine" class="mobile-link">Daily Routine</a></li>
+            <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="btn btn-pink btn-full" onclick="openModal('enrollModal')">Enroll Your Child ↗</button>
+            <button class="btn btn-outline btn-full" onclick="openModal('tourModal')">Book a Tour</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section (Matches image design) -->
+        <section id="home" class="hero-section">
+            <!-- Floating Decorative Doodles (matching image) -->
+            <div class="doodle doodle-sun" title="Sunny Day">
+                <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="22" stroke="#F6B830" stroke-width="5" fill="none"
+                        stroke-dasharray="4 4" />
+                    <path d="M50 10V20M50 80V90M10 50H20M80 50H90M22 22L29 29M71 71L78 78M22 78L29 71M71 29L78 22"
+                        stroke="#F6B830" stroke-width="5" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <div class="doodle doodle-flower" title="Growth">
+                <svg width="65" height="65" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 15C55 28 45 28 50 15Z" fill="#007D4C" />
+                    <path
+                        d="M50 50 M50 25 C40 25 35 35 42 42 C35 35 25 40 25 50 C25 60 35 65 42 58 C35 65 40 75 50 75 C60 75 65 65 58 58 C65 65 75 60 75 50 C75 40 65 35 58 42 C65 35 60 25 50 25Z"
+                        fill="#007D4C" />
+                    <circle cx="50" cy="50" r="10" fill="#F6B830" />
+                </svg>
+            </div>
+
+            <div class="doodle doodle-star" title="Sparkle">
+                <svg width="50" height="50" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 10 L58 38 L88 38 L63 56 L73 86 L50 68 L27 86 L37 56 L12 38 L42 38 Z" fill="#E2A9F3"
+                        stroke="#C47BE6" stroke-width="3" />
+                </svg>
+            </div>
+
+            <div class="doodle doodle-planet" title="Universe of Curiosity">
+                <svg width="65" height="65" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="24" stroke="#1DB9B5" stroke-width="5" fill="none" />
+                    <ellipse cx="50" cy="50" rx="42" ry="12" stroke="#1DB9B5" stroke-width="4"
+                        transform="rotate(-20 50 50)" />
+                </svg>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="tag-badge">Big Care, Little Playful Moments</div>
+                    <h1 class="hero-title">The Foundation for<br>Life</h1>
+                    <p class="hero-description">
+                        A joyful kindergarten where learning feels like play and every child grows with confidence,
+                        creativity, and care.
+                    </p>
+                    <div class="hero-cta-group">
+                        <button class="btn btn-pink btn-lg btn-pill" onclick="openModal('enrollModal')">
+                            Enroll Your Child <span class="arrow">↗</span>
+                        </button>
+                        <button class="btn btn-outline btn-lg btn-pill" onclick="openModal('tourModal')">
+                            Book a Tour
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Image Card with Scalloped Top Arch -->
+                <div class="hero-image-wrapper">
+                    <div class="cloud-scallop-header"></div>
+                    <div class="hero-image-frame">
+                        <img src="images/hero_kids.jpg"
+                            alt="Happy preschool children smiling together in SMART KIDZZ classroom" class="hero-img">
+                    </div>
+                    <!-- Quick Floating Badge -->
+                    <div class="floating-badge badge-left">
+                        <div class="badge-icon">🎨</div>
+                        <div class="badge-text">
+                            <strong>100% Play-Based</strong>
+                            <span>Interactive STEAM Curriculum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Ribbon -->
+        <section class="stats-ribbon">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="15">15+</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">100%</div>
+                    <div class="stat-label">Certified Educators</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1 : 6</div>
+                    <div class="stat-label">Teacher-Child Ratio</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="2500">2,500+</div>
+                    <div class="stat-label">Happy Graduates</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section-padding about-section">
+            <div class="container">
+                <div class="grid grid-2 align-center">
+                    <div class="about-image-stack">
+                        <div class="main-about-img-box">
+                            <img src="images/program_toddler.jpg" alt="Toddler engaging in sensory play at SMART KIDZZ"
+                                class="about-img">
+                        </div>
+                    </div>
+                    <div class="about-text-content">
+                        <span class="section-subtitle">Welcome to SMART KIDZZ</span>
+                        <h2 class="section-title">Nurturing Wonder & Lifelong Love For Learning</h2>
+                        <p class="section-desc">
+                            At SMART KIDZZ, we believe that early childhood is a precious season of discovery. Our holistic
+                            approach combines gentle care, play-based learning, and STEAM exploration to nurture your
+                            child's cognitive, emotional, and social development.
+                        </p>
+                        <ul class="feature-checklist">
+                            <li><span class="check-icon">✓</span> <strong>Play-Based Learning:</strong> Hands-on
+                                activities that spark natural curiosity.</li>
+                            <li><span class="check-icon">✓</span> <strong>Warm & Safe Environment:</strong> Gated campus
+                                with 24/7 CCTV surveillance.</li>
+                            <li><span class="check-icon">✓</span> <strong>Nutritious Organic Meals:</strong> Freshly
+                                prepared balanced daily snacks & lunches.</li>
+                            <li><span class="check-icon">✓</span> <strong>Parent Connect App:</strong> Real-time photo
+                                updates, nap schedules & meal reports.</li>
+                        </ul>
+                        <div class="about-author">
+                            <div class="author-avatar">👩‍🏫</div>
+                            <div class="author-info">
+                                <strong>Dr. Eleanor Vance</strong>
+                                <span>Founder & Director of Early Education</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="section-padding programs-section">
+            <div class="container">
+                <div class="text-center section-header">
+                    <span class="section-subtitle">Tailored For Every Stage</span>
+                    <h2 class="section-title">Our Learning Programs</h2>
+                    <p class="section-desc max-600">Thoughtfully designed age-appropriate programs that foster
+                        independence, motor skills, social empathy, and academic readiness.</p>
+                </div>
+
+                <div class="programs-grid">
+                    <!-- Toddler Care -->
+                    <div class="program-card card-toddler">
+                        <div class="program-badge">1.5 - 2.5 Years</div>
+                        <div class="program-icon-box">👶</div>
+                        <h3 class="program-title">Toddler Nest</h3>
+                        <p class="program-desc">Focuses on sensory exploration, basic language expansion, emotional
+                            comfort, and fine motor movement in a cozy nursery.</p>
+                        <div class="program-meta">
+                            <span>⏱ 8:30 AM - 12:30 PM</span>
+                            <span>👥 Max 8 per class</span>
+                        </div>
+                        <button class="btn btn-sm btn-pink-light" onclick="openProgramDetails('toddler')">Curriculum
+                            Details →</button>
+                    </div>
+
+                    <!-- Nursery / Playgroup -->
+                    <div class="program-card card-nursery">
+                        <div class="program-badge">2.5 - 3.5 Years</div>
+                        <div class="program-icon-box">🎨</div>
+                        <h3 class="program-title">Playgroup & Nursery</h3>
+                        <p class="program-desc">Encourages creative expression, storytelling, group play, color & shape
+                            recognition, and independence habits.</p>
+                        <div class="program-meta">
+                            <span>⏱ 8:30 AM - 1:00 PM</span>
+                            <span>👥 Max 10 per class</span>
+                        </div>
+                        <button class="btn btn-sm btn-yellow-light" onclick="openProgramDetails('nursery')">Curriculum
+                            Details →</button>
+                    </div>
+
+                    <!-- Junior Kindergarten -->
+                    <div class="program-card card-jrkg">
+                        <div class="program-badge">3.5 - 4.5 Years</div>
+                        <div class="program-icon-box">🧩</div>
+                        <h3 class="program-title">Junior Kindergarten</h3>
+                        <p class="program-desc">Early phonics, number sense, scientific inquiry, logic puzzles, music,
+                            and collaborative team activities.</p>
+                        <div class="program-meta">
+                            <span>⏱ 8:30 AM - 2:00 PM</span>
+                            <span>👥 Max 12 per class</span>
+                        </div>
+                        <button class="btn btn-sm btn-green-light" onclick="openProgramDetails('jrkg')">Curriculum
+                            Details →</button>
+                    </div>
+
+                    <!-- Senior Kindergarten -->
+                    <div class="program-card card-srkg">
+                        <div class="program-badge">4.5 - 6.0 Years</div>
+                        <div class="program-icon-box">🚀</div>
+                        <h3 class="program-title">Senior Kindergarten</h3>
+                        <p class="program-desc">Primary school readiness program featuring reading fluency, math
+                            concepts, coding basics, and STEM projects.</p>
+                        <div class="program-meta">
+                            <span>⏱ 8:30 AM - 3:00 PM</span>
+                            <span>👥 Max 14 per class</span>
+                        </div>
+                        <button class="btn btn-sm btn-blue-light" onclick="openProgramDetails('srkg')">Curriculum
+                            Details →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "A Day at SMART KIDZZ" Daily Routine Section -->
+        <section id="routine" class="section-padding routine-section">
+            <div class="container">
+                <div class="text-center section-header">
+                    <span class="section-subtitle">Joyful Structure</span>
+                    <h2 class="section-title">A Day at SMART KIDZZ</h2>
+                    <p class="section-desc max-600">Click any time slot to see how your child will spend their enriching
+                        day with us!</p>
+                </div>
+
+                <div class="routine-wrapper">
+                    <!-- Timeline Buttons -->
+                    <div class="routine-tabs" id="routineTabs">
+                        <button class="routine-tab active" data-time="08:30 AM">
+                            <span class="time-label">08:30 AM</span>
+                            <span class="title-label">Morning Circle</span>
+                        </button>
+                        <button class="routine-tab" data-time="09:30 AM">
+                            <span class="time-label">09:30 AM</span>
+                            <span class="title-label">STEAM Discovery</span>
+                        </button>
+                        <button class="routine-tab" data-time="10:45 AM">
+                            <span class="time-label">10:45 AM</span>
+                            <span class="title-label">Outdoor Garden</span>
+                        </button>
+                        <button class="routine-tab" data-time="11:30 AM">
+                            <span class="time-label">11:30 AM</span>
+                            <span class="title-label">Art & Music</span>
+                        </button>
+                        <button class="routine-tab" data-time="12:30 PM">
+                            <span class="time-label">12:30 PM</span>
+                            <span class="title-label">Lunch & Rest</span>
+                        </button>
+                        <button class="routine-tab" data-time="02:30 PM">
+                            <span class="time-label">02:30 PM</span>
+                            <span class="title-label">Story & Pickup</span>
+                        </button>
+                    </div>
+
+                    <!-- Active Display Card -->
+                    <div class="routine-display-card" id="routineDisplay">
+                        <div class="routine-card-icon" id="routineIcon">🌞</div>
+                        <div class="routine-card-body">
+                            <span class="routine-badge" id="routineTime">08:30 AM - 09:15 AM</span>
+                            <h3 id="routineTitle">Morning Greeting & Circle Time</h3>
+                            <p id="routineDesc">Children gather for weather tracking, morning welcome songs, sharing
+                                show-and-tell items, and setting daily intentions with smiles.</p>
+                            <div class="routine-tags" id="routineTags">
+                                <span class="tag">Social Bonding</span>
+                                <span class="tag">Language Skills</span>
+                                <span class="tag">Emotional Warmth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="section-padding teachers-section">
+            <div class="container">
+                <div class="text-center section-header">
+                    <span class="section-subtitle">Loving Experts</span>
+                    <h2 class="section-title">Meet Our Dedicated Teachers</h2>
+                    <p class="section-desc max-600">Our educators are degree-certified early learning specialists
+                        passionate about nourishing every child's potential.</p>
+                </div>
+
+                <div class="teachers-grid">
+                    <!-- Teacher 1 -->
+                    <div class="teacher-card">
+                        <div class="teacher-img-wrapper">
+                            <div class="teacher-avatar-placeholder bg-pink-soft">
+                                👩‍🏫
+                            </div>
+                        </div>
+                        <div class="teacher-info">
+                            <span class="teacher-role">Head Toddler Educator</span>
+                            <h3 class="teacher-name">Ms. Sarah Jenkins</h3>
+                            <p class="teacher-bio">Master's in Early Childhood Pedagogy. 9+ years experience creating
+                                comforting sensory environments.</p>
+                            <div class="teacher-specialties">
+                                <span>Montessori</span>
+                                <span>Child Psychology</span>
+                                <span>Sensory Play</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 2 -->
+                    <div class="teacher-card">
+                        <div class="teacher-img-wrapper">
+                            <div class="teacher-avatar-placeholder bg-yellow-soft">
+                                👨‍🏫
+                            </div>
+                        </div>
+                        <div class="teacher-info">
+                            <span class="teacher-role">Music & STEAM Lead</span>
+                            <h3 class="teacher-name">Mr. David Miller</h3>
+                            <p class="teacher-bio">B.A. in Music & Elementary Education. Sparking rhythm, song, and
+                                scientific curiosity in young minds.</p>
+                            <div class="teacher-specialties">
+                                <span>Acoustic Guitar</span>
+                                <span>Early STEAM</span>
+                                <span>Storytelling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 3 -->
+                    <div class="teacher-card">
+                        <div class="teacher-img-wrapper">
+                            <div class="teacher-avatar-placeholder bg-green-soft">
+                                👩‍🎨
+                            </div>
+                        </div>
+                        <div class="teacher-info">
+                            <span class="teacher-role">Art Studio Specialist</span>
+                            <h3 class="teacher-name">Ms. Clara Rossi</h3>
+                            <p class="teacher-bio">Fine Arts graduate certified in Reggio Emilia creative methods.
+                                Inspiring bold young artists daily.</p>
+                            <div class="teacher-specialties">
+                                <span>Clay & Paint</span>
+                                <span>Reggio Emilia</span>
+                                <span>Nature Craft</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 4 -->
+                    <div class="teacher-card">
+                        <div class="teacher-img-wrapper">
+                            <div class="teacher-avatar-placeholder bg-blue-soft">
+                                👩‍🔬
+                            </div>
+                        </div>
+                        <div class="teacher-info">
+                            <span class="teacher-role">Senior KG Lead Teacher</span>
+                            <h3 class="teacher-name">Ms. Maria Santos</h3>
+                            <p class="teacher-bio">12 years guiding pre-K graduates to confident reading fluency, early
+                                math, and leadership skills.</p>
+                            <div class="teacher-specialties">
+                                <span>Phonics</span>
+                                <span>Math Logic</span>
+                                <span>School Readiness</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo & Campus Gallery -->
+        <section id="gallery" class="section-padding gallery-section">
+            <div class="container">
+                <div class="text-center section-header">
+                    <span class="section-subtitle">Life at SMART KIDZZ</span>
+                    <h2 class="section-title">Campus & Activity Gallery</h2>
+                    <p class="section-desc max-600">Peek inside our vibrant classrooms, outdoor gardens, and joyful
+                        daily moments.</p>
+                </div>
+
+                <!-- Gallery Filters -->
+                <div class="gallery-filters" id="galleryFilters">
+                    <button class="filter-btn active" data-filter="all">All Photos</button>
+                    <button class="filter-btn" data-filter="classroom">Classrooms</button>
+                    <button class="filter-btn" data-filter="outdoor">Playground</button>
+                    <button class="filter-btn" data-filter="art">Art & Music</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-item" data-category="classroom"
+                        onclick="openLightbox('images/hero_kids.jpg', 'Joyful Learning Circle')">
+                        <img src="images/hero_kids.jpg" alt="Children learning together in classroom" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>🔍 Classrooms</span>
+                            <p>Bright & Safe Learning Spaces</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="art"
+                        onclick="openLightbox('images/program_toddler.jpg', 'Sensory Play Corner')">
+                        <img src="images/program_toddler.jpg" alt="Toddler playing with wooden blocks" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>🔍 Sensory Play</span>
+                            <p>Hands-on Wooden Toys</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="outdoor">
+                        <div class="gallery-placeholder bg-outdoor">
+                            <span>🌳 Nature Garden & Splash Zone</span>
+                        </div>
+                        <div class="gallery-overlay">
+                            <span>🔍 Outdoor</span>
+                            <p>Organic Garden & Playground</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="art">
+                        <div class="gallery-placeholder bg-art">
+                            <span>🎨 Watercolors & Clay Studio</span>
+                        </div>
+                        <div class="gallery-overlay">
+                            <span>🔍 Creative Arts</span>
+                            <p>Expressive Craft Station</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="events">
+                        <div class="gallery-placeholder bg-events">
+                            <span>🎈 Annual Festival & Costume Day</span>
+                        </div>
+                        <div class="gallery-overlay">
+                            <span>🔍 Celebrations</span>
+                            <p>Joyful Community Events</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="classroom">
+                        <div class="gallery-placeholder bg-library">
+                            <span>📚 Cozy Reading Nook</span>
+                        </div>
+                        <div class="gallery-overlay">
+                            <span>🔍 Story Corner</span>
+                            <p>500+ Illustrated Storybooks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section-padding testimonials-section">
+            <div class="container">
+                <div class="text-center section-header">
+                    <span class="section-subtitle">Parent Words</span>
+                    <h2 class="section-title">What Parents Say About Us</h2>
+                </div>
+
+                <div class="testimonials-slider">
+                    <div class="testimonial-card active">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Sending our daughter to SMART KIDZZ was the best decision we made! She used to be super shy, but
+                            within 2 months she came home singing songs, counting in English and Spanish, and bubbling
+                            with confidence!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar-img">👩‍💼</div>
+                            <div class="author-details">
+                                <strong>Jessica & Mark Stevens</strong>
+                                <span>Parents of Lily (Playgroup)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding contact-section">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="contact-info-card">
+                        <span class="section-subtitle">Get In Touch</span>
+                        <h2 class="section-title">We'd Love To Hear From You!</h2>
+                        <p class="section-desc">Have questions about enrollment, fees, or our teaching philosophy? Reach
+                            out to our friendly admin team today.</p>
+
+                        <div class="contact-detail-list">
+                            <div class="contact-detail-item">
+                                <div class="icon">📍</div>
+                                <div>
+                                    <strong>Campus Location:</strong>
+                                    <p>101, Road No. 5, Nagarjuna Colony, Balaji Colony Phase 1, Hastinapuram, Hyderabad, Telangana 500070</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon">📞</div>
+                                <div>
+                                    <strong>Phone / Whatsapp:</strong>
+                                    <p>+91 8886331177</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon">✉️</div>
+                                <div>
+                                    <strong>Email Us:</strong>
+                                    <p>hello@smartkidzz-preschool.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon">⏰</div>
+                                <div>
+                                    <strong>Campus Hours:</strong>
+                                    <p>Monday - Friday: 7:30 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <h3>Send Us a Quick Message</h3>
+                        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="cName">Parent Full Name *</label>
+                                <input type="text" id="cName" class="form-control" placeholder="e.g. Sarah Jenkins"
+                                    required>
+                            </div>
+
+                            <div class="grid grid-2 gap-15">
+                                <div class="form-group">
+                                    <label for="cEmail">Email Address *</label>
+                                    <input type="email" id="cEmail" class="form-control" placeholder="name@example.com"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cPhone">Phone Number *</label>
+                                    <input type="tel" id="cPhone" class="form-control" placeholder="+91 8886331177"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cProgram">Interested Program</label>
+                                <select id="cProgram" class="form-control">
+                                    <option>Toddler Nest (1.5 - 2.5 yrs)</option>
+                                    <option>Playgroup & Nursery (2.5 - 3.5 yrs)</option>
+                                    <option>Junior KG (3.5 - 4.5 yrs)</option>
+                                    <option>Senior KG (4.5 - 6 yrs)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cMessage">Message or Questions *</label>
+                                <textarea id="cMessage" rows="4" class="form-control"
+                                    placeholder="Tell us about your child or any questions you have..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-pink btn-full btn-lg">Send Message 🚀</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Wavy Scallop Top -->
+    <footer class="site-footer">
+        <div class="footer-wave"></div>
+        <div class="container footer-content">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="brand-logo footer-logo">
+                        <span class="logo-text text-white">SMART KIDZZ</span>
+                    </div>
+                    <p>Where little minds learn big dreams. Providing safe, nurturing, play-based early childhood
+                        education since 2011.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About SMART KIDZZ</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#teachers">Our Teachers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#programs">Toddler Nest</a></li>
+                        <li><a href="#programs">Playgroup & Nursery</a></li>
+                        <li><a href="#programs">Junior Kindergarten</a></li>
+                        <li><a href="#programs">Senior Kindergarten</a></li>
+                        <li><a href="#programs">After-School Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for parenting tips & campus event updates!</p>
+                    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                        <input type="email" placeholder="Your email address" required class="form-control">
+                        <button type="submit" class="btn btn-yellow">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SMART KIDZZ Kindergarten & Preschool. All Rights Reserved. Designed with ❤️ for happy kids.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: Book a Tour Modal -->
+    <div class="modal-overlay" id="tourModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('tourModal')">&times;</button>
+            <div class="modal-header">
+                <span class="modal-tag">Free Visit</span>
+                <h2>Book a Campus Tour</h2>
+                <p>Come see our bright classrooms and meet our loving teachers in person!</p>
+            </div>
+            <form id="tourForm" onsubmit="handleTourSubmit(event)">
+                <div class="form-group">
+                    <label>Parent Name *</label>
+                    <input type="text" class="form-control" required placeholder="Full Name">
+                </div>
+                <div class="grid grid-2 gap-15">
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" class="form-control" required placeholder="+91 8886331177">
+                    </div>
+                    <div class="form-group">
+                        <label>Child's Age</label>
+                        <input type="text" class="form-control" placeholder="e.g. 3 years">
+                    </div>
+                </div>
+                <div class="grid grid-2 gap-15">
+                    <div class="form-group">
+                        <label>Preferred Date *</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time Slot *</label>
+                        <select class="form-control" required>
+                            <option>Morning (10:00 AM)</option>
+                            <option>Afternoon (02:00 PM)</option>
+                            <option>Late Afternoon (04:00 PM)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-pink btn-full btn-lg mt-10">Confirm Tour Booking 📅</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Enroll Child Modal -->
+    <div class="modal-overlay" id="enrollModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('enrollModal')">&times;</button>
+            <div class="modal-header">
+                <span class="modal-tag">Admission 2026-27</span>
+                <h2>Enroll Your Child at SMART KIDZZ</h2>
+                <p>Fill out the application draft and our admissions officer will contact you within 24 hours.</p>
+            </div>
+            <form id="enrollForm" onsubmit="handleEnrollSubmit(event)">
+                <div class="grid grid-2 gap-15">
+                    <div class="form-group">
+                        <label>Parent Name *</label>
+                        <input type="text" class="form-control" required placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" class="form-control" required placeholder="email@example.com">
+                    </div>
+                </div>
+                <div class="grid grid-2 gap-15">
+                    <div class="form-group">
+                        <label>Child's Full Name *</label>
+                        <input type="text" class="form-control" required placeholder="Child Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Child's Date of Birth *</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Select Program *</label>
+                    <select class="form-control" required>
+                        <option>Toddler Nest (1.5 - 2.5 yrs)</option>
+                        <option selected>Playgroup & Nursery (2.5 - 3.5 yrs)</option>
+                        <option>Junior KG (3.5 - 4.5 yrs)</option>
+                        <option>Senior KG (4.5 - 6 yrs)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-pink btn-full btn-lg mt-10">Submit Enrollment Application
+                    🚀</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 3: Program Detail Modal -->
+    <div class="modal-overlay" id="programModal">
+        <div class="modal-card modal-lg">
+            <button class="modal-close" onclick="closeModal('programModal')">&times;</button>
+            <div class="modal-header">
+                <span class="modal-tag" id="pModalBadge">Program Overview</span>
+                <h2 id="pModalTitle">Program Details</h2>
+            </div>
+            <div class="modal-body" id="pModalContent">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 4: Image Lightbox Modal -->
+    <div class="modal-overlay" id="lightboxModal">
+        <div class="lightbox-card">
+            <button class="modal-close light" onclick="closeModal('lightboxModal')">&times;</button>
+            <img id="lightboxImg" src="" alt="Enlarged gallery view">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Toast Notification Box -->
+    <div id="toast" class="toast-notification"></div>
+
+    <!-- Confetti Canvas overlay -->
+    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
